@@ -11,13 +11,6 @@ class Example extends HTMLElement {
   async initialise(args) {
     console.log("`cgp-example` is initialised with", args)
     const { eventManager, context } = args
-  
-    const content = this.shadowRoot.getElementById("inner-html");
-    content.innerHTML = `
-      <div>The plugin has been initialized with</div>
-      <div>=========</div>
-      <pre>${JSON.stringify(context, null, 2)}</pre>
-    `
 
     this.shadowRoot.getElementById("modified").addEventListener("click", () => {
       eventManager.publish({

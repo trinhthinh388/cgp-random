@@ -2,10 +2,6 @@ class Example extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.innerHTML = `
-        <button id="modified">Send MODIFIED event</button>
-        <button id="unmodified">Send UNMODIFIED event</button>
-        `
   }
 
   async initialise(args) {

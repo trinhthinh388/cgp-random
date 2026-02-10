@@ -31,6 +31,12 @@ class Example extends HTMLElement {
     })
   }
 
+  async getState() {
+    return {
+      modified: Date.now() % 2 === 0
+    }
+  }
+
   disconnectedCallback() {
     console.log("`cgp-example` is destroyed!")
   }
